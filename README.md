@@ -1,108 +1,91 @@
-🍔📊 Food Delivery Data Analysis Hackathon
-📌 Project Overview
+# 🍔 Food Delivery Data Analysis Hackathon 📊
 
-This project was built as part of a Data Analysis Hackathon to simulate a real-world data engineering + analytics workflow.
-Multiple datasets in different formats were integrated, cleaned, and analyzed to extract actionable business insights for a food delivery platform.
+---
 
-📁 Dataset Description
+## 📌 Project Overview
+This project was developed as part of a **Data Analysis Hackathon** to simulate a **real-world data engineering and analytics workflow**.  
+The objective was to **integrate multiple data sources**, perform **end-to-end analysis**, and extract **actionable business insights** for a food delivery platform.
 
-The project uses three heterogeneous data sources:
+---
 
-orders.csv
-Transaction-level data
+## 📁 Dataset Description
+The analysis is based on **three heterogeneous datasets**:
 
-order_id
+### 🧾 orders.csv
+Transactional **order-level data** including:
+- **Order ID**
+- **User ID**
+- **Restaurant ID**
+- **Order Date**
+- **Total Amount**
 
-user_id
+### 👤 users.json
+User **master data** including:
+- **User ID**
+- **User Name**
+- **City**
+- **Membership Type** (**Gold / Regular**)
 
-restaurant_id
+### 🍽️ restaurants.sql
+Restaurant **reference data** including:
+- **Restaurant ID**
+- **Cuisine Type**
+- **Rating**
 
-order_date
+---
 
-total_amount
+## 🛠️ Tech Stack
+- **Programming Language**: **Python 3.x**
+- **Libraries Used**:
+  - **Pandas** – data manipulation
+  - **SQLite3** – SQL data extraction
+  - **Matplotlib / Seaborn** – data visualization
+- **Environment**: **Jupyter Notebook**
 
-users.json
-User master data
+---
 
-user_id
+## ⚙️ Implementation Workflow
 
-name
+### 🔹 Step 1: Data Loading & Extraction
+- Loaded **CSV files** using **Pandas**
+- Parsed **JSON data** into structured DataFrames
+- Executed **SQL script** using an **in-memory SQLite database**
 
-city
+---
 
-membership_type (Gold / Regular)
+### 🔹 Step 2: Data Integration
+- Performed **Left Join** between **orders** and **users** on `user_id`
+- Merged the result with **restaurants** on `restaurant_id`
+- Ensured **100% data retention** (**10,000 order records preserved**)
 
-restaurants.sql
-Restaurant master data
+---
 
-restaurant_id
+### 🔹 Step 3: Exploratory Data Analysis (EDA)
+Analyzed key **business metrics**, including:
+- **Total revenue by city**
+- **Average Order Value (AOV) by cuisine**
+- **Gold vs Regular membership performance**
+- **Quarter-wise and seasonal revenue trends**
 
-cuisine
+---
 
-rating
+## 📊 Key Insights
+- 🏆 **Top Revenue City**: **Chennai** leads in revenue from **Gold members**
+- 🌮 **Highest AOV Cuisine**: **Mexican cuisine**
+- ⭐ **Membership Impact**: **Gold members contribute ~50% of total orders**
+- 📈 **Seasonality Trend**: **Peak revenue in Q3 (July–September)**
 
-🛠️ Tech Stack
+---
 
-Language: Python 3.x
+## 🚀 How to Run the Project
 
-Libraries:
-
-Pandas – data manipulation
-
-SQLite3 – SQL-based data extraction
-
-Matplotlib / Seaborn – data visualization
-
-Environment: Jupyter Notebook
-
-⚙️ Implementation Workflow
-1️⃣ Data Loading & Extraction
-
-Loaded CSV files using Pandas
-
-Parsed structured JSON into DataFrames
-
-Executed SQL script using in-memory SQLite to extract restaurant data
-
-2️⃣ Data Integration
-
-Left Join: orders ⟵ users on user_id
-
-Left Join: merged result ⟵ restaurants on restaurant_id
-
-Preserved all 10,000 order records to avoid data loss
-
-3️⃣ Exploratory Data Analysis (EDA)
-
-Key business metrics analyzed:
-
-Total revenue by city
-
-Average Order Value (AOV) by cuisine
-
-Gold vs Regular member performance
-
-Quarterly and seasonal revenue trends
-
-📊 Key Insights
-
-Top Revenue City: Chennai (Gold members dominate revenue)
-
-Best Performing Cuisine: Mexican cuisine has the highest AOV
-
-Membership Impact: Gold members contribute ~50% of total orders
-
-Seasonality: Revenue peaks in Q3 (July–September)
-
-🚀 How to Run the Project
-1️⃣ Clone the repository
-git clone https:https://github.com/prasadnikam2005/Food-Delivery-Hackathon
-cd Food-Delivery-Hackathon
-
-2️⃣ Install dependencies
+### 1️⃣ Clone the Repository
+```bash
+git clone [https://github.com/YourUsername/Food-Delivery-Hackathon.git]
+2️⃣ Install Required Libraries
 pip install pandas matplotlib seaborn
 
-3️⃣ Project structure
+3️⃣ Project Structure
 Food-Delivery-Hackathon/
 │
 ├── orders.csv
@@ -111,22 +94,23 @@ Food-Delivery-Hackathon/
 ├── hackathon_solution.ipynb
 └── README.md
 
-4️⃣ Run the notebook
+4️⃣ Run the Notebook
 
 Open hackathon_solution.ipynb in Jupyter Notebook and execute all cells.
 
-📌 Business Value
+💼 Business Value
 
 Demonstrates real-world data integration
 
 Combines SQL + Python analytics
 
-Shows clear business-driven insights
+Focuses on business-driven insights
 
-Hackathon-ready and placement-friendly project
+Ideal for hackathons, portfolios, and placement interviews
 
 👤 Author
 
 Prasad Nikam
-B.Tech CSE (AI & ML) | VIIT Pune
+B.Tech CSE (AI & ML)
+VIIT Pune
 Google Student Ambassador
