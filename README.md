@@ -79,9 +79,9 @@ Analyzed key **business metrics**, including:
 
 ## 🚀 How to Run the Project
 
-### 1️⃣ Clone the Repository
+ 1️⃣ Clone the Repository
 ```bash
-git clone [https://github.com/YourUsername/Food-Delivery-Hackathon.git]
+git clone https://github.com/prasadnikam2005/Food-Delivery-Hackathon
 2️⃣ Install Required Libraries
 pip install pandas matplotlib seaborn
 
